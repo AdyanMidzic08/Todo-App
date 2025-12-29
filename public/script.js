@@ -48,6 +48,8 @@ async function addTodo(title, text) {
       });
     }
     showTodo();
+    titleInput.value = ""; 
+    todoInput.value = "";
   } catch (error) {
     console.error("Fehler beim Erstellen:", error);
   }
@@ -97,6 +99,18 @@ async function updateTodo() {
     }
   });
 }
+
+todoInput.addEventListener('keyup' ,function(event){
+  if(event.key == "Enter") {
+    addTodo(titleInput.value,todoInput.value);
+  }
+})
+
+titleInput.addEventListener('keyup',function(event){
+  if(event.key == "Enter") {
+    addTodo(titleInput.value,todoInput.value);
+  }
+})
 
 showTodo();
 updateTodo();
