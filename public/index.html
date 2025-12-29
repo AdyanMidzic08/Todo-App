@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="todo-container">
+      <input id="inputTitle" type="text" placeholder="Title eingeben" />
+      <input id="inputTodo" type="text" placeholder="TODO: eingeben" />
+      <div onclick="addTodo(document.getElementById('inputTitle').value,document.getElementById('inputTodo').value)" id="addButton" class="add-btn">Hinzufügen</div>
+      
+      <ul id="todoList"></ul>
+    </div>
+  </body>
+</html>
